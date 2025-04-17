@@ -112,14 +112,11 @@ To run this project locally for development, follow these steps:
 * **Testing:** Add comprehensive unit and integration tests for both the frontend and backend.
 * **Deployment Documentation:** Provide clear instructions on how to deploy the application to various hosting platforms.
 
-## Contributing
-
-[Optional: Add information about how others can contribute to your project, such as bug reports, feature requests, or pull requests.]
 
 ## License
 
-[Optional: Include the license under which your project is distributed.]
+@maivangswe
 
 ## Contact
 
-[Optional: Add your contact information or links to your social media/portfolio.]
+maivangswe
