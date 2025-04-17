@@ -61,28 +61,42 @@ export default function Index() {
   };
 
   return (
-    <div>
-      <h2> Rephrase Your Statuses</h2>
-      <Form method="post">
+    <div className="mt-10 DM Serif Text max-w-md mx-auto p-6 border border-gray-300 rounded-md bg-gray-100">
+      <h2 className="text-xl text-gray-700 text-center mb-4">
+        Rephrase Your Statuses
+      </h2>
+      <Form method="post" className="flex flex-col gap-2 mb-4">
         <textarea
           id="status"
           name="status"
           rows={4}
-          cols={50}
+          className="p-2 border border-gray-300 rounded-md text-sm"
           value={inputText}
           onChange={(e) => handleInputChange(e.target.value)}
           placeholder="Enter your status here..."
         />
-        <button type="submit">Rephrase</button>
+        <button
+          type="submit"
+          className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Rephrase
+        </button>
       </Form>
-      {actionData?.error && <p style={{ color: "red" }}> {actionData.error}</p>}
+      {actionData?.error && (
+        <p className="text-red-500 mb-2">{actionData.error}</p>
+      )}
 
       {actionData?.rephrased && (
-        <div>
-          <h2>Rephrased Statuses:</h2>
-          <ul>
+        <div className="mt-4 p-4 border border-gray-200 rounded-md bg-white">
+          <h2 className="text-lg text-gray-600 mb-2">Rephrased Statuses:</h2>
+          <ul className="list-none p-0">
             {actionData.rephrased.map((rephrasedStatus, index) => (
-              <li key={index}>{rephrasedStatus}</li>
+              <li
+                key={index}
+                className="py-2 border-b border-gray-100 text-gray-600 last:border-b-0"
+              >
+                {rephrasedStatus}
+              </li>
             ))}
           </ul>
         </div>
